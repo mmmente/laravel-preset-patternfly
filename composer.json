@@ -19,13 +19,13 @@
     },
     "autoload": {
         "psr-4": {
-            "LaravelFrontendPresets\\Patternfly\\": "src/"
+            "RLuders\\Patternfly\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "LaravelFrontendPresets\\Patternfly\\PatternflyServiceProvider"
+                "RLuders\\Patternfly\\PatternflyPresetServiceProvider"
             ]
         }
     }
