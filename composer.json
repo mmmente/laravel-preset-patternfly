@@ -1,0 +1,32 @@
+{
+    "name": "rluders/laravel-preset-patternfly",
+    "description": "Laravel 5.5 Front-end preset for Patternfly",
+    "keywords": [
+        "laravel",
+        "preset",
+        "patternfly",
+        "frontend"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ricardo Lüders",
+            "email": "ricardo@luders.com.br"
+        }
+    ],
+    "require": {
+        "laravel/framework": "5.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelFrontendPresets\\Patternfly\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelFrontendPresets\\Patternfly\\PatternflyServiceProvider"
+            ]
+        }
+    }
+}
