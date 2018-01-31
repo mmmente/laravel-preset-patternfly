@@ -26,7 +26,6 @@ class PatternflyPresent extends AbstractPreset
         static::updatePackages();
         static::updateSass();
         static::installPatternfly();
-        static::updateMix();
 
         if ($withAuth) {
             static::addAuthTemplate();
@@ -40,9 +39,9 @@ class PatternflyPresent extends AbstractPreset
     protected static function updatePackageArray(array $packages)
     {
         // packages to add to the package.json
-        $packagesToAdd = ['package-name' => '^version'];
+        $packagesToAdd = ['patternfly' => '^3.37.10'];
         // packages to remove from the package.json
-        $packagesToRemove = ['package-name' => '^version'];
+        $packagesToRemove = ['bootstrap'];
         return $packagesToAdd + Arr::except($packages, $packagesToRemove);
     }
 
@@ -66,11 +65,6 @@ class PatternflyPresent extends AbstractPreset
         );
         // copy a new bootstrap.js file from your stubs folder
         copy(__DIR__.'/skeleton-stubs/bootstrap.js', resource_path('assets/js/bootstrap.js'));
-    }
-
-    protected static function updateMix()
-    {
-
     }
 
     protected static function addAuthTeamplte()
